@@ -11,3 +11,10 @@ data class Ship(
     var numberOfHits: Int = 0,
     var sunk: Boolean = false
 )
+
+enum class Direction {
+    LEFT, RIGHT, UP, DOWN
+}
+
+class ShipPlacementException(override val message: String = "There is already ship in that position")
+    : RuntimeException(message)
