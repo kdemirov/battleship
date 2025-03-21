@@ -1,3 +1,21 @@
+# Battleship game
+
+- The game begins with view for the first player and only one grid is shown since the second player
+- has not places his ships. The placement of a ship is done with selecting the first coordinate of the grid 
+- and the last coordinate. The available ships are shown on the right side of the view.
+# Setup
+- Version for Java JDK must be 17 <= 22. 
+## Linux and MacOs
+- For building and running the app all you to do is is set first JAVA_HOME environment variable if is not 
+- set give permission to `build_and_run.sh` script and run it with parameter `desktop|android|web` 
+- i did not have the chance to test for ios so is excluded from this script.
+
+## Windows
+- Run `build_and_run.ps1` from power shell. 
+
+# Code
+- The code is located at `composeApp/src/commonMain` and the tests `composeApp/src/commonTest`
+
 This is a Kotlin Multiplatform project targeting Android, iOS, Web, Desktop.
 
 * `/composeApp` is for code that will be shared across your Compose Multiplatform applications.

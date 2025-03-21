@@ -120,9 +120,3 @@ compose.desktop {
         }
     }
 }
-
-compose.resources {
-    publicResClass = false
-    packageOfResClass = "se.makrohard.jobs.res"
-    generateResClass = auto
-}
