@@ -37,17 +37,17 @@ class BattleshipViewModel : ViewModel() {
             CARRIER_SIZE + BATTLESHIP_SIZE + SUBMARINE_CRUISER_SIZE * 2 + DESTROYER_SIZE
     }
 
-    private val _player1Grid: MutableStateFlow<Array<Array<CellType>>> =
-        MutableStateFlow(fillDefaultGridValues())
-    private val _player2Grid: MutableStateFlow<Array<Array<CellType>>> =
-        MutableStateFlow(fillDefaultGridValues())
-    private val _player1Ships: MutableStateFlow<MutableList<Ship>> =
-        MutableStateFlow(mutableListOf())
-    private val _player2Ships: MutableStateFlow<MutableList<Ship>> =
-        MutableStateFlow(mutableListOf())
+    private val _player1Grid: MutableState<Array<Array<CellType>>> =
+        mutableStateOf(fillDefaultGridValues())
+    private val _player2Grid: MutableState<Array<Array<CellType>>> =
+        mutableStateOf(fillDefaultGridValues())
+    private val _player1Ships: MutableState<MutableList<Ship>> =
+        mutableStateOf(mutableListOf())
+    private val _player2Ships: MutableState<MutableList<Ship>> =
+        mutableStateOf(mutableListOf())
     private val _playerTurn: MutableState<Boolean> = mutableStateOf(true)
     private val _isGameOver: MutableState<Boolean> = mutableStateOf(false)
-    private val _scoreboard: MutableStateFlow<Scoreboard> = MutableStateFlow(Scoreboard(0, 0))
+    private val _scoreboard: MutableState<Scoreboard> = mutableStateOf(Scoreboard(0, 0))
 
     val player1Grid = _player1Grid
     val player2Grid = _player2Grid
